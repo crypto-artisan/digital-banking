@@ -1,22 +1,22 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 // import InputMask from "react-input-mask";
 import logo from "assets/image/logo.png";
 import imacPhone from "assets/image/imac-phone.png";
 import Container from "components/Container";
-import PhoneNumberContext from "context/PhoneNumber";
-import PhoneCodeContext from "context/PhoneCode";
+// import PhoneNumberContext from "context/PhoneNumber";
+// import PhoneCodeContext from "context/PhoneCode";
 
 const IntroPart = () => {
-  const { phoneNumber, setPhoneNumber } = useContext<any>(PhoneNumberContext);
-  const { setPhoneCode } = useContext<any>(PhoneCodeContext);
+  // const { phoneNumber, setPhoneNumber } = useContext<any>(PhoneNumberContext);
+  // const { setPhoneCode } = useContext<any>(PhoneCodeContext);
 
   const handleClick = () => {
-    if (phoneNumber === "" || phoneNumber.indexOf("_") > -1) {
-      setPhoneNumber("");
-    } else {
-      setPhoneCode(true);
-      window.location.href = "#phonecode";
-    }
+    // if (phoneNumber === "" || phoneNumber.indexOf("_") > -1) {
+    //   setPhoneNumber("");
+    // } else {
+    //   setPhoneCode(true);
+    window.location.href = "#getStarted";
+    // }
   };
 
   return (
@@ -46,9 +46,11 @@ const IntroPart = () => {
           </ul>
         </div>
         <div className="text-center">
-          <div className="text-[#116cdd] inline-block btn bg-white -mt-[5px]">
-            Let's Get Started
-          </div>
+          <a href="#getStarted">
+            <div className="text-[#116cdd] inline-block btn bg-white -mt-[5px]">
+              Let's Get Started
+            </div>
+          </a>
         </div>
       </div>
       <Container>

@@ -91,7 +91,7 @@ const GetStartedPart = () => {
 
   return (
     <div id="funnel" className="relative bg-blue-50">
-      <div className="relative bg-white">
+      <div className="relative bg-white" id="getStarted">
         <svg
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
           viewBox="0 0 1440 110"
@@ -200,7 +200,7 @@ const GetStartedPart = () => {
               </div>
             </>
           ) : (
-            <div className="max-w-[600px] mx-auto sm:pb-20">
+            <div className="max-w-[600px] mx-auto sm:pb-20 sm:mb-0 mb-8">
               <div>
                 <div>
                   <div className="contact-tab-header flex">
