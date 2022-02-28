@@ -54,7 +54,7 @@ const IntroPart = () => {
         </div>
       </div>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center text-white pb-16 pt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start text-white pb-16 pt-10">
           <div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight">
               Get your government benefits up to&nbsp;
