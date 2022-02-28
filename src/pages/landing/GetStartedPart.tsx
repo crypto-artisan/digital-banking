@@ -25,7 +25,7 @@ const GetStartedPart = () => {
   const [code, setCode] = useState("");
   const [inputFlag, setInputFlag] = useState(true);
   const [error, setError] = useState("");
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(3);
 
   // const handleGetStartedClick = () => {
   //   if (phoneNumber === "" || phoneNumber.indexOf("_") > -1) {
@@ -207,7 +207,7 @@ const GetStartedPart = () => {
                     <div
                       onClick={() => setTab(1)}
                       className={`cursor-pointer font-bold bg-white px-6 py-4 rounded-tl-3xl ${
-                        tab === 2 ? "text-gray-600" : "text-blue-500"
+                        tab === 1 ? "text-gray-600" : "text-blue-500"
                       }`}
                     >
                       <p>Customer Service</p>
@@ -215,7 +215,7 @@ const GetStartedPart = () => {
                     <div
                       onClick={() => setTab(2)}
                       className={`cursor-pointer font-bold bg-white px-6 py-4 pl-0 ${
-                        tab === 1 ? "text-gray-600" : "text-blue-500"
+                        tab === 2 ? "text-gray-600" : "text-blue-500"
                       }`}
                     >
                       <p>{"Sign in"}</p>
