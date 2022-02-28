@@ -8,17 +8,19 @@ import Container from "components/Container";
 
 const ServiceCard = (props: any) => {
   return (
-    <div className="rounded-3xl w-full max-w-[395px] mb-5 py-8">
+    <div className="rounded-3xl w-full max-w-[395px] md:mb-5 py-8">
       <div className="">
-        <div className="w-full relative bg-blue-50 rounded-3xl h-44 mb-5">
-          <img src={props.img} alt="Service" className="absolute m-auto top-0 left-0 right-0 bottom-0 px-14 w-full" />
+        <div className="w-full flex items-center relative bg-blue-50 rounded-3xl h-44 mb-5">
+          <img
+            src={props.img}
+            alt="Service"
+            className="m-auto px-7 lg:w-full"
+          />
         </div>
         <h1 className="mb-2 text-lg font-bold leading-2 -tracking-[1px] text-gray-800">
           {props.title}
         </h1>
-        <div
-          className="leading-7 text-base text-gray-600"
-        >
+        <div className="leading-7 text-base text-gray-600">
           {props.children}
         </div>
       </div>
@@ -30,7 +32,7 @@ const ServicePart = () => {
   return (
     <Container>
       <div id="services" className="md:py-16 py-3 w-full m-auto md:px-[15px]">
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 mt-[42px] gap-6 justify-center">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 mt-[42px] sm:gap-6 justify-center">
           <ServiceCard img={serviceImg1} title="Mobile Banking">
             <ul className="service-card-list list-disc pl-5">
               <li>Always know your account balance</li>

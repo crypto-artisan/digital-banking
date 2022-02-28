@@ -22,8 +22,14 @@ const IntroPart = () => {
   return (
     <div className="landing-intro pt-12">
       <div className="max-w-[1200px] constrain lg:flex-row flex-col flex landing-header mb-4 m-auto">
-        <img src={logo} alt="logo" className="logo-img h-10 cursor-pointer" />
-        <div className="flex-grow pt-1">
+        <div className="text-center">
+          <img
+            src={logo}
+            alt="logo"
+            className="inline-block logo-img h-10 cursor-pointer"
+          />
+        </div>
+        <div className="flex-grow pt-1 lg:pb-0 pb-3">
           <ul className="flex flex-row text-center mx-auto w-full max-w-xs font-bold text-white">
             <li className="flex-grow opacity-90 hover:opacity-100">
               <a href="#about">About</a>
@@ -39,8 +45,8 @@ const IntroPart = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <div className="text-[#116cdd] btn bg-white -mt-[5px]">
+        <div className="text-center">
+          <div className="text-[#116cdd] inline-block btn bg-white -mt-[5px]">
             Let's Get Started
           </div>
         </div>
@@ -48,7 +54,7 @@ const IntroPart = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 text-white pb-16 pt-10">
           <div>
-            <h1 className="text-7xl leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight">
               Get your government benefits up to&nbsp;
               <br />
               <b>6 days early!</b>

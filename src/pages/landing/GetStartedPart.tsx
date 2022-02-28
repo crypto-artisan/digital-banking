@@ -200,7 +200,7 @@ const GetStartedPart = () => {
               </div>
             </>
           ) : (
-            <div className="max-w-[600px] mx-auto pb-20">
+            <div className="max-w-[600px] mx-auto sm:pb-20">
               <div>
                 <div>
                   <div className="contact-tab-header flex">
