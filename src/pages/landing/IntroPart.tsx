@@ -76,7 +76,7 @@ const IntroPart = () => {
               src={imacPhone}
               alt="imacPhone"
               style={{ filter: "brightness(105%) saturate(120%)" }}
-              className="w-full"
+              className="w-full mt-2"
             />
           </div>
         </div>
