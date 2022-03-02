@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Divider from "components/Divider";
 // import FixedMenu from "components/FixedMenu";
 import ScrollTop from "components/ScrollTop";
@@ -14,6 +14,7 @@ import ServicePart from "./ServicePart";
 import SupportPart from "./SupportPart";
 
 const LandingPage = () => {
+  
   return (
     <div>
       <IntroPart />

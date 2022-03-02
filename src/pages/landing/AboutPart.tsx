@@ -21,14 +21,12 @@ const AboutPart = () => {
         <div className="landing-about grid grid-cols-1 md:grid-cols-2 bg-white rounded-3xl overflow-hidden">
           <div className="relative">
             <div className="w-full h-full p-8">
-              <div>
-                <img
-                  src={aboutImg}
-                  style={{ filter: "grayscale(25%) brightness(110%)" }}
-                  className="relative w-full h-full inline-block object-cover rounded-2xl"
-                  alt="aboutImg"
-                />
-              </div>
+              <img
+                src={aboutImg}
+                style={{ filter: "grayscale(25%) brightness(110%)" }}
+                className="relative w-full h-full inline-block object-cover rounded-2xl"
+                alt="aboutImg"
+              />
             </div>
           </div>
           <div className="py-8 pt-0 md:pt-8 pl-8 md:pl-0 pr-10">
@@ -73,8 +71,8 @@ const AboutPart = () => {
         >
           <defs>
             <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="100%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="0%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import InputMask from "react-input-mask";
 import Container from "components/Container";
@@ -6,7 +6,7 @@ import PhoneNumberContext from "context/PhoneNumber";
 import PhoneCodeContext from "context/PhoneCode";
 
 // import cardImg from "assets/image/Avid_Card_Slant.png";
-import accessImg from "assets/image/early-access-icon.png";
+import accessImg from "../../assets/image/early-access-icon.png";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import {
   FaPhoneAlt,
@@ -16,6 +16,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import axios from "axios";
 
 // import { FaChevronRight } from "react-icons/fa";
 
@@ -26,7 +27,6 @@ const GetStartedPart = () => {
   const [inputFlag, setInputFlag] = useState(true);
   const [error, setError] = useState("");
   const [tab, setTab] = useState(3);
-
   // const handleGetStartedClick = () => {
   //   if (phoneNumber === "" || phoneNumber.indexOf("_") > -1) {
   //     setPhoneNumber("");
@@ -89,6 +89,22 @@ const GetStartedPart = () => {
     setCode("");
   };
 
+  const phoneNumberVerification = (number: string) => {
+    if (number.length === 10) {
+      const headers = {
+        'CSRFToken': 'f5ed84be-9fa7-47a9-89e7-2f98dd78394e',
+        'Content-Type' : 'application/json'
+      }
+      axios
+      .post('https://myearlybenefits.com/AvidPrepaid/generateMobileToken', {codeType: 'short', phone: number}, {headers : headers})
+      .then(response => response.data == 'success' ? setPhoneCode(true) : setPhoneCode(false))
+      .catch(err => console.log(err))
+    }
+  }
+  useEffect(() => {
+    phoneNumberVerification(String(phoneNumber).replace(/[^1-9]/g, ''))
+  }, [phoneNumber])
+
   return (
     <div id="funnel" className="relative bg-blue-50">
       <div className="relative bg-white" id="getStarted">
@@ -100,8 +116,8 @@ const GetStartedPart = () => {
         >
           <defs>
             <linearGradient id="sw-gradient-6" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="100%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="0%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
@@ -349,8 +365,8 @@ const GetStartedPart = () => {
         >
           <defs>
             <linearGradient id="sw-gradient-7" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(239, 246, 255, 1)" offset="100%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="0%"></stop>
+              <stop stopColor="rgba(239, 246, 255, 1)" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path

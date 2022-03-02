@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="AVID Prepaid"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -32,6 +32,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="waves"></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -44,4 +45,24 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+  <script>
+    let waves = VANTA.WAVES({
+      el: "#waves",
+      color: 0x0458B5,
+      mouseControls: false,
+      touchControls: false,
+      gyroControls: false,
+      minHeight: 800.00,
+      minWidth: 250.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      shininess: 75.00,
+      waveHeight: 10.00,
+      waveSpeed: 0.50,
+      zoom: 1.4
+    });
+    waves.triggerMouseMove();
+  </script>
 </html>

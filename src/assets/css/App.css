@@ -12,12 +12,8 @@ html {
   transition: all 0.2s;
 }
 
-.landing-intro {
-  background: url("../image/landing-header.png");
-  background-size: cover;
-  background-position-x: revert;
-  background-repeat: no-repeat;
-  @apply bg-blue-500
+#waves {
+  filter: brightness(93%) saturate(96%) contrast(94%) blur(1px);
 }
 
 @media screen and (min-width: 1024px) {
