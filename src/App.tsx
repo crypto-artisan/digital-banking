@@ -5,6 +5,7 @@ import "assets/css/App.css";
 import { LandingPage } from "pages";
 import PhoneNumberContext from "context/PhoneNumber";
 import PhoneCodeContext from "context/PhoneCode";
+import { MyMark } from "components/MyMark";
 
 function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -20,6 +21,7 @@ function App() {
         <Router>
           <Route exact path="/" component={LandingPage} />
         </Router>
+        <MyMark />
       </PhoneCodeContext.Provider>
     </PhoneNumberContext.Provider>
   );
